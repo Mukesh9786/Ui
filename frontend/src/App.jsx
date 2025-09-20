@@ -425,7 +425,7 @@ export default function App() {
   ];
 
   // Backend base URL (change if needed)
-  const BASE = process.env.REACT_APP_API_BASE || 'http://localhost:4000';
+  const apiUrl = import.meta.env.VITE_BACKEND_URL || 'http://localhost:4000';
 
   // startPipeline: upload files and poll backend pipeline
   const startPipeline = async (files /* File[] */, selectedRegs /* string[] */, optionalResetFilesSetter) => {
